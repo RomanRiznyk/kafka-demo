@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        properties:
+#          topic: topic1
+#          topic: topic2
+        consumer:
+#          instance1:
+#            bootstrap-servers: localhost:9092
+#          instance2:
+#            bootstrap-servers: localhost:9093
+          bootstrap-servers: localhost:9092
+          group_id: group_id
+          auto-offset-reset: earliest
+          key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          value-deserializer: org.apache.kafka.common.serialization.StringDeserialize
+          enable-auto-commit: true
+#        consumer:
+#          bootstrap-servers: localhost:9092
+#          group_id: group_id
+#          auto-offset-reset: earliest
+#          key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#          value-deserializer: org.apache.kafka.common.serialization.StringDeserialize
+#          enable-auto-commit: true
+        producer:
+          bootstrap-servers: localhost:9092
+          key-serializer: org.apache.kafka.common.serialization.StringSerializer
+          value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#        template:
+#          default-topic: topic1

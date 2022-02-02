@@ -1,0 +1,4 @@
+#Kafka
+spring.kafka.template.default-topic=my-first-topic
+spring.kafka.bootstrap-servers=localhost:9092
+spring.kafka.consumer.group-id=0
